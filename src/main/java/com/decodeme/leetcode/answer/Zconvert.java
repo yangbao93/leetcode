@@ -30,30 +30,30 @@ public class Zconvert {
     //        Y A   H R
     //        P     I
     public String convert(String s, int numRows) {
-        if (numRows == 1){
+        if (numRows == 1) {
             return s;
         }
         StringBuilder sb = new StringBuilder();
         // 字符间隔
-        int temp = 2*numRows -2;
+        int temp = 2 * numRows - 2;
         for (int i = 0; i < numRows; i++) {
             int row = i;
-            if (i == 0){
+            if (i == 0) {
                 // 处理第一行
                 while (row < s.length()) {
                     sb.append(s.charAt(row));
                     row += temp;
                 }
-            }else if (i == numRows-1){
+            } else if (i == numRows - 1) {
                 // 处理尾行
                 while (row < s.length()) {
                     sb.append(s.charAt(row));
                     row += temp;
                 }
-            }else {
+            } else {
                 // 处理中间行
                 // 中间行的中间字符间隔
-                int intervalSize = temp - 2*i;
+                int intervalSize = temp - 2 * i;
                 while (row < s.length()) {
                     sb.append(s.charAt(row));
                     int tempSize = row + intervalSize;
