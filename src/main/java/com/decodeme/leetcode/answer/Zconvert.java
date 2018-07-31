@@ -3,7 +3,7 @@ package com.decodeme.leetcode.answer;
 /**
  * Z字形变换
  */
-public class Solution {
+public class Zconvert {
 
     //        将字符串 "PAYPALISHIRING" 以Z字形排列成给定的行数：
     //
@@ -69,7 +69,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution sl = new Solution();
+        Zconvert sl = new Zconvert();
         String paypalishiring = sl.convert("ABC", 3);
         System.out.println(paypalishiring);
     }
