@@ -1,6 +1,4 @@
-package com.decodeme.leetcode;
-
-import sun.jvm.hotspot.gc_implementation.parallelScavenge.PSYoungGen;
+package com.decodeme.leetcode.answer;
 
 /**
  * Z字形变换
