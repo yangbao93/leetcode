@@ -22,6 +22,7 @@ public class RemoveNthFromEnd {
     //    你能尝试使用一趟扫描实现吗？
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {
+        // 当链表只有一个的情况
         if (head.next == null) {
             return null;
         }
@@ -34,9 +35,11 @@ public class RemoveNthFromEnd {
         if (head.next != null) {
             i = remove(head.next, target);
         }
+        // 移除的是尾部
         if (target == 1 && i == (target + 1)) {
             head.next = null;
         }
+        // 移除的是头部或中间
         if (target == i && target > 1) {
             head.val = head.next.val;
             head.next = head.next.next;
