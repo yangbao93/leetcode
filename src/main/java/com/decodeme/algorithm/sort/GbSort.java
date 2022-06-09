@@ -7,6 +7,12 @@ import java.util.Arrays;
 
 public class GbSort {
 
+    /**
+     * 归并排序
+     *
+     * @param nums 传入数组
+     * @return 排序结果
+     */
     public int[] gbSort(int[] nums) {
         if (nums.length < 2) {
             return nums;
@@ -17,6 +23,13 @@ public class GbSort {
         return merge(gbSort(left), gbSort(right));
     }
 
+    /**
+     * 合并方法
+     *
+     * @param left
+     * @param right
+     * @return
+     */
     private int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
         for (int idx = 0, i = 0, j = 0; idx < result.length; idx++) {
