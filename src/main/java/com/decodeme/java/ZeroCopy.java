@@ -23,7 +23,6 @@ public class ZeroCopy {
         // transfile的方式
         try (FileInputStream fis = new FileInputStream(file)) {
             FileChannel channel = fis.getChannel();
-
             FileOutputStream fos = new FileOutputStream("/a/b/c_copy.txt");
             FileChannel fosChannel = fos.getChannel();
             // 将一个管道transfer到另一个管道中
